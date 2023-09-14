@@ -1,0 +1,245 @@
+/********** Boostrap CSS **********/
+:root {
+    --primary: #000;
+    --secondary: #0000ff;
+    --light: #EFFDF5;
+    --dark: #000;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Navbar ***/
+
+.nav-bar {
+    position: relative;
+    margin-top: 12px;
+    padding: 0 3rem;
+    transition: .5s;
+    z-index: 9999;
+}
+
+.nav-bar.sticky-top {
+    position: sticky;
+    padding: 0;
+    z-index: 9999;
+}
+
+.navbar {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    display: flex;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .nav-bar {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: 100%;
+        margin-top: 0;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+/*** Header ***/
+@media (min-width: 992px) {
+    .header {
+        margin-top: -120px;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 40px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--dark);
+}
+
+@media (max-width: 768px) {
+    .header-carousel .owl-nav {
+        left: 25px;
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #DDDDDD;
+}
+
+/*** Category ***/
+.cat-item div {
+    background: #FFFFFF;
+    border: 1px solid #e3e3e3;
+    transition: .5s;
+}
+
+.cat-item:hover div {
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.3);
+}
+
+.cat-item div * {
+    transition: .5s;
+}
+
+/*** Icon ***/
+.icon {
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF !important;
+    border-radius: 4px;
+}
+
+/*** Property List ***/
+.nav-pills .nav-item .btn {
+    color: var(--dark);
+}
+
+.nav-pills .nav-item .btn:hover,
+.nav-pills .nav-item .btn.active {
+    color: #FFFFFF;
+}
+
+.property-text {
+    color:#FFFFFF !important;
+}
+.property-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+}
+
+.property-item img {
+    transition: .5s;
+}
+
+.property-item:hover img {
+    transform: scale(1.1);
+}
+
+.property-item .border-top {
+    border-top: 1px solid #e3e3e3 !important;
+}
+
+.property-item .border-end {
+    border-right: 1px solid #e3e3e3 !important;
+}
+
+/*** Sign-in Form ***/
+.wrapper {	
+  margin-top: 80px;
+  margin-bottom: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 60px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  gap: 20px;  
+
+
+
+	.form-control {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+     
+
+	}
+}
